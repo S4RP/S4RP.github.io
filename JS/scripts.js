@@ -1,22 +1,22 @@
 // Direct user to requested pages
 function direct_home()
 {
-    location.href = '/index';
+    location.href = 'templates/index';
 }
 
 function direct_bio()
 {
-    location.href = '/bio';
+    location.href = 'templates/bio';
 }
 
 function direct_lib()
 {
-    location.href = '/library';
+    location.href = 'templates/library';
 }
 
 function direct_adv()
 {
-    location.href = '/adventures';
+    location.href = 'templates/adventures';
 }
 
 //Google Search
