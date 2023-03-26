@@ -1,42 +1,57 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <link href="styles/styles.css" rel="stylesheet">
-        <title>My Webpage</title>
-        <script src="JS/scripts.js"></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div class="header">
-            <h1>SARP'S WEBSITE</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+        <div class="navbar">
+            <div class="logo">SARP YILMAZ</div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+            <a href="#" class="action_btn">Contact</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
-        <div class="buttongroup1">
-            <button type="button" class="button1" id="homebut">HOMEPAGE</button>
-            <button type="button" class="button1" id="biobut">MY BIO</button>
-            <button type="button" class="button1" id="libbut">MY LIBRARY</button>
-            <button type="button" class="button1" id="advbut">MY ADVENTURES</button>
+
+        <div class="dropdown_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="action_btn">Contact</a></li>
         </div>
-        <div id="socmeddiv">
-            <h2>Social Media</h2>
-            <A href="https://www.linkedin.com/in/sarp-yilmaz/" target="_blank">
-                <img style="top: 12vw;" class="linkimage" src="/content/linkedin.png" alt="linkedin">
-                <h3 style="position: absolute; left: 12vw; top: 14vw">LinkedIn</h3>
-            </A>
-            <A href="https://github.com/S4RP" target="_blank">
-                <img class="linkimage" style="top: 20vw;" src="/content/github.jpeg" alt="linkedin">
-                <h3 style="position: absolute; left: 12vw; top: 22vw">Github</h3>
-            </A>
-        </div>
-        <div>
-            <form id="googlesearch" onsubmit="return false">
-                <h2>Google Search</h2>
-                <input id="gsearch" autocomplete="off" autofocus placeholder="Search" type="text" >
-                <button id="gsearchbut" type="submit">Submit</button>
-            </form>
-        </div>
-    </body>
+
+    </header>
+
+    <script>
+        const toggleBtn =  document.querySelector(".toggle_btn")
+        const toggleBtnIcon =  document.querySelector(".toggle_btn i")
+        const dropDownMenu =  document.querySelector(".dropdown_menu")
+
+        toggleBtn.onclick = function() {
+            dropDownMenu.classList.toggle("open")
+            const isOpen = dropDownMenu.classList.contains("open")
+
+            toggleBtnIcon.classList = isOpen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+
+        }
+    </script>
+    
+</body>
 </html>
