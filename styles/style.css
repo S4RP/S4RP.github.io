@@ -5,26 +5,56 @@
     font-family: "Open Sans", sans-serif;
 }
 
+
 body {
     height: 100vh;
-    background-color: #000;
-    background-image: url("/content/space_back.jpeg");
-    background-size: cover;
-    background-position: center;
+    background-color: white;
 }
 
-.logo {
-    color: white;
+header {
+    position: fixed;
+    height: 8vh;
+    width: 100%;
+    padding: 0 2rem;
+    background-color: white;
+    font-size: 16px;
 }
+
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.main-div {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(30, 120, 160);
+    height: 600px;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+
+.logo {
+    color: black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 5vh;
+    color: rgb(24, 24, 80);
+    font-weight: bold;
+}
+
 
 li {
     list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
 }
 
 a:hover {
@@ -32,37 +62,21 @@ a:hover {
     cursor: pointer;;
 }
 
-header {
-    position: relative;
-    height: 60px;
-    padding: 0 2rem;
-    /* background-color: rgba(0, 0, 0, 0.4);  */
-    background-color: gray;
-}
-
-.navbar {
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar .logo, a {
-    font-size: 1.5rem;
+.navbar a {
+    font-size: 3vh;
     font-weight: bold;
+    text-decoration: none;
+    color: rgb(24, 24, 80);
 }
 
 .navbar .links {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .navbar .toggle_btn {
-    color: black;
-    font-size: 1.5rem;
+    color: rgb(24, 24, 80);
+    font-size: 3rem;
     cursor: pointer;
     display: none;
 }
@@ -82,7 +96,7 @@ header {
 
 .action_btn:hover {
     scale: 1.1;
-    color: white;
+    color: gold;
 }
 
 .action_btn:active {
@@ -136,4 +150,15 @@ header {
         display: block;
     }
     
+}
+
+
+@media(max-width: 1440px) {
+    .logo {
+        font-size: 4vh;
+    }
+
+    .navbar a {
+        font-size: 2vh;
+    }
 }
