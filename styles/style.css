@@ -11,6 +11,7 @@ body {
     background-color: white;
 }
 
+
 header {
     position: fixed;
     height: 8vh;
@@ -32,12 +33,32 @@ header {
 
 
 .main-div {
-    position: fixed;
+    height: 100vh;
+    background-color: white;
+}
+
+
+.first-sect {
+    top: 8vh;
+    position: absolute;
     width: 100%;
     background-color: rgb(30, 120, 160);
-    height: 600px;
+    height: 60vh;
     margin: 0 auto;
-    z-index: -1;
+}
+
+
+.socials {
+    display: flex;
+    position: absolute;
+    top: 70vh;
+    height: 6vh;
+    width: 100%;
+}
+
+.soc {
+    padding: 0.5vw;
+    margin: 0 2vw;
 }
 
 
@@ -76,7 +97,7 @@ a:hover {
 
 .navbar .toggle_btn {
     color: rgb(24, 24, 80);
-    font-size: 3rem;
+    font-size: 5vh;
     cursor: pointer;
     display: none;
 }
@@ -92,6 +113,39 @@ a:hover {
     font-weight: bold;
     cursor: pointer;
     transition: scale 0.2 ease;
+}
+
+.pic-sarp {
+    position: absolute;
+    height: 90%;
+    margin: auto auto;
+    bottom: 0;
+    right: 20%;
+}
+
+.text-greet {
+    position: absolute;
+    top: 10%;
+    left: 6%;
+    height: 80%;
+    width: 60%;
+    font-size: 7vw;
+    color: white;
+}
+
+.tg.hello {
+    display: block;
+}
+
+.tg.sarp {
+    font-weight: bold;
+    color: red;
+    font-size: 9vw;
+}
+
+.tg.desc {
+    display: block;
+    font-size: 3vw;
 }
 
 .action_btn:hover {
@@ -152,7 +206,7 @@ a:hover {
     
 }
 
-
+/* Medium Size Screen */
 @media(max-width: 1440px) {
     .logo {
         font-size: 4vh;
@@ -160,5 +214,36 @@ a:hover {
 
     .navbar a {
         font-size: 2vh;
+    }
+
+    .pic-sarp {
+        right: 0%;
+        height: 80%;
+    }
+
+    .text-greet {
+        top: 20%;
+        left: 5%;
+    }
+}
+
+/* Small Size Screen */
+@media(max-width: 480px) {
+    .logo {
+        font-size: 4vh;
+    }
+
+    .navbar a {
+        font-size: 2vh;
+    }
+
+    .pic-sarp {
+        right: 0%;
+        height: 70%;
+    }
+
+    .text-greet {
+        top: 40%;
+        left: 5%;
     }
 }
