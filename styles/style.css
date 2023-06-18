@@ -19,6 +19,7 @@ header {
     padding: 0 2rem;
     background-color: white;
     font-size: 16px;
+    z-index: 1;
 }
 
 
@@ -45,6 +46,7 @@ header {
     background-color: rgb(30, 120, 160);
     height: 60vh;
     margin: 0 auto;
+    z-index: 0;
 }
 
 
@@ -61,6 +63,11 @@ header {
     margin: 0 2vw;
 }
 
+.imgsoc {
+    width: auto;
+    height: 100%;
+}
+
 
 .logo {
     color: black;
@@ -68,7 +75,7 @@ header {
     display: flex;
     align-items: center;
     vertical-align: middle;
-    font-size: 5vh;
+    font-size: 4.8vh;
     color: rgb(24, 24, 80);
     font-weight: bold;
 }
@@ -84,7 +91,7 @@ a:hover {
 }
 
 .navbar a {
-    font-size: 3vh;
+    font-size: 2.5vh;
     font-weight: bold;
     text-decoration: none;
     color: rgb(24, 24, 80);
@@ -92,7 +99,7 @@ a:hover {
 
 .navbar .links {
     display: flex;
-    gap: 4rem;
+    gap: 2.8rem;
 }
 
 .navbar .toggle_btn {
@@ -120,14 +127,14 @@ a:hover {
     height: 90%;
     margin: auto auto;
     bottom: 0;
-    right: 20%;
+    right: 10%;
 }
 
 .text-greet {
     position: absolute;
     top: 10%;
-    left: 6%;
-    height: 80%;
+    left: 2%;
+    /* height: 80%; */
     width: 60%;
     font-size: 7vw;
     color: white;
@@ -190,7 +197,7 @@ a:hover {
 }
 
 /* Responsive Design */
-@media(max-width: 992px) {
+@media(max-width: 1024px) {
     .navbar .links,
     .navbar .action_btn {
         display: none;
@@ -206,8 +213,27 @@ a:hover {
     
 }
 
-/* Medium Size Screen */
+/* Large Size Screen */
 @media(max-width: 1440px) {
+    .logo {
+
+    }
+
+    .navbar a {
+
+    }
+
+    .pic-sarp {
+
+    }
+
+    .text-greet {
+
+    }
+}
+
+/* Medium Size Screen */
+@media(max-width: 1024px) {
     .logo {
         font-size: 4vh;
     }
@@ -218,7 +244,7 @@ a:hover {
 
     .pic-sarp {
         right: 0%;
-        height: 80%;
+        height: 90%;
     }
 
     .text-greet {
@@ -228,7 +254,7 @@ a:hover {
 }
 
 /* Small Size Screen */
-@media(max-width: 480px) {
+@media(max-width: 768px) {
     .logo {
         font-size: 4vh;
     }
@@ -237,13 +263,41 @@ a:hover {
         font-size: 2vh;
     }
 
+    .first-sect {
+        position: relative;
+    }
+
     .pic-sarp {
-        right: 0%;
-        height: 70%;
+        height: 84%;
+        display: block;
+        position: relative;
     }
 
     .text-greet {
-        top: 40%;
+        top: 0%;
         left: 5%;
+        display: block;
+        position: relative;
+        height: 16%;
+        margin: auto auto;
+    }
+
+    .tg.hello {
+        display: inline-block;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .soc {
+        padding: 1vw;
+        margin: 0 4vw;
+        width: 20%;
+    }
+
+    .imgsoc {
+        height: auto;
+        width: 100%;
     }
 }
