@@ -8,25 +8,30 @@
 
 body {
     height: 100vh;
+    width: 100vw;
     background-color: white;
 }
 
 
 header {
-    position: fixed;
-    height: 8vh;
+    top: 0;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 12vh;
     width: 100%;
     padding: 0 2rem;
     background-color: white;
-    font-size: 16px;
+    font-size: 54px;
     z-index: 1;
 }
 
 
 .navbar {
-    width: 100%;
     height: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    font-size: 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,28 +39,37 @@ header {
 
 
 .main-div {
+    /* position: relative;
+    top: 12vh; */
+    /* margin-top: 12vh; */
     height: 100vh;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
 }
 
 
 .first-sect {
-    top: 8vh;
-    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
     width: 100%;
     background-color: rgb(30, 120, 160);
     height: 60vh;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     z-index: 0;
+    max-height: 60vh;
+    /* overflow: hidden; */
 }
 
 
 .socials {
     display: flex;
-    position: absolute;
-    top: 70vh;
-    height: 6vh;
+    flex-direction: row;
+    height: 16vh;
     width: 100%;
+    padding: 1vh;
 }
 
 .soc {
@@ -75,14 +89,14 @@ header {
     display: flex;
     align-items: center;
     vertical-align: middle;
-    font-size: 4.8vh;
     color: rgb(24, 24, 80);
     font-weight: bold;
 }
 
 
-li {
+.navbar li {
     list-style: none;
+    font-size: 2rem;
 }
 
 a:hover {
@@ -91,7 +105,6 @@ a:hover {
 }
 
 .navbar a {
-    font-size: 2.5vh;
     font-weight: bold;
     text-decoration: none;
     color: rgb(24, 24, 80);
@@ -122,21 +135,29 @@ a:hover {
     transition: scale 0.2 ease;
 }
 
+.sarp-img-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
 .pic-sarp {
-    position: absolute;
-    height: 90%;
-    margin: auto auto;
-    bottom: 0;
-    right: 10%;
+    height: 100%;
+    width: auto;
+    margin-left: 12vw;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .text-greet {
-    position: absolute;
-    top: 10%;
-    left: 2%;
-    /* height: 80%; */
-    width: 60%;
-    font-size: 7vw;
+    justify-content: space-between;
+    align-items: left;
+    position: relative;
+    padding: 2vh;
+    /* width: 60%; */
+    font-size: 54px;
     color: white;
 }
 
@@ -147,12 +168,12 @@ a:hover {
 .tg.sarp {
     font-weight: bold;
     color: red;
-    font-size: 9vw;
+    font-size: 1.6em;
 }
 
 .tg.desc {
     display: block;
-    font-size: 3vw;
+    font-size: 0.6em;
 }
 
 .action_btn:hover {
@@ -215,89 +236,43 @@ a:hover {
 
 /* Large Size Screen */
 @media(max-width: 1440px) {
-    .logo {
 
-    }
-
-    .navbar a {
-
-    }
-
-    .pic-sarp {
-
-    }
-
-    .text-greet {
-
-    }
 }
 
 /* Medium Size Screen */
 @media(max-width: 1024px) {
-    .logo {
-        font-size: 4vh;
-    }
-
-    .navbar a {
-        font-size: 2vh;
-    }
-
-    .pic-sarp {
-        right: 0%;
-        height: 90%;
-    }
-
-    .text-greet {
-        top: 20%;
-        left: 5%;
-    }
+    
 }
 
 /* Small Size Screen */
 @media(max-width: 768px) {
-    .logo {
-        font-size: 4vh;
+    header {
+        font-size: 32px;
     }
 
-    .navbar a {
-        font-size: 2vh;
-    }
-
-    .first-sect {
-        position: relative;
+    .sarp-img-container {
+        max-height: 60%;
     }
 
     .pic-sarp {
-        height: 84%;
-        display: block;
-        position: relative;
+        margin-left: 0;
     }
 
-    .text-greet {
-        top: 0%;
-        left: 5%;
-        display: block;
-        position: relative;
-        height: 16%;
-        margin: auto auto;
+    .navbar {
+        font-size: 20px;
     }
 
-    .tg.hello {
-        display: inline-block;
+    .first-sect {
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .socials {
+        height: 12vh;
         justify-content: center;
     }
 
-    .soc {
-        padding: 1vw;
-        margin: 0 4vw;
-        width: 20%;
-    }
-
-    .imgsoc {
-        height: auto;
-        width: 100%;
+    .text-greet {
+        font-size: 24px;
     }
 }
