@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/style_personal.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+    <div class="logo"><span class="logo text">SARP YILMAZ</span></div>
+        <div class="navbar">
+            <ul class="links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/cv.html">CV</a></li>
+                <li><a href="/personal.htm">Personal</a></li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/cv.html">CV</a></li>
+            <li><a href="/personal.html">Personal</a></li>
+            <li><a href="#" class="action_btn">Contact</a></li>
+        </div>
+
+    </header>
+
+    <div class="main-div">
+        <div class="first-sect">
+            <div class="hobby-image-container">
+                <img src="/pics/sarp_life.jpeg" alt="" class="hobby-image">
+            </div>
+
+            <div class="div-hobby">
+                <div class="hobby-title pad-2vh"><span>Travelling</span></div>
+                <div class="hobby-image-container">
+                    <img src="/pics/sarp_taj.jpeg" alt="" class="hobby-image">
+                </div>
+                <div class="hobby-desc pad-2vh">
+                    <span>I have an insatiable love for traveling, not just as a checklist of places to visit, but as a profound exploration of cultures and people. It's about cherishing the details, embracing the unfamiliar, and weaving stories into my own understanding. I take my time, immersing myself in each experience, connecting with others, and learning from the diverse beauty our world has to offer. Traveling is not just a hobby; it's a way of life—a journey of self-discovery, compassion, and appreciation for the richness that surrounds us. Through my wanderings, I celebrate our shared humanity and leave a positive impact on the places I touch.</span>
+                </div>
+            </div>
+
+            <div class="div-hobby">
+                <div class="hobby-title pad-2vh"><span>Camping & Hiking</span></div>
+                <div class="hobby-image-container">
+                    <img src="/pics/sarp_nature.jpeg" alt="" class="hobby-image">
+                </div>
+                <div class="hobby-desc pad-2vh">
+                    <span>Camping and hiking have become my cherished escapes in a world dominated by concrete cities and constant distractions. Amid the woods and wilderness, I rediscover a long-lost connection to Mother Nature. The gentle symphony of birdsong, rustling leaves, and flowing rivers envelops me in tranquility, washing away the clamor of fast-paced living. My mind finds solace, and anxiety dissipates as I immerse myself in the beauty of the great outdoors. I relish gazing at distant landscapes, feeling the vastness of the world. But it is around a crackling campfire, beneath a canopy of stars, where I cherish intimate conversations with friends, sharing stories that bind us in the embrace of nature's embrace. Camping and hiking grant me moments of pure bliss and a reminder of the simple yet profound joys of life.</span>
+                </div>
+            </div>
+
+            <div class="div-hobby">
+                <div class="hobby-title pad-2vh"><span>Snowboarding</span></div>
+                <div class="hobby-image-container">
+                    <img src="/pics/sarp_snow.jpeg" alt="" class="hobby-image">
+                </div>
+                <div class="hobby-desc pad-2vh">
+                    <span>Snowboarding is a passion that transcends mere sport; it feels like a graceful dance on the canvas of fresh snow. As I carve through the powdery slopes, each turn becomes a harmonious movement, and I am immersed in a mesmerizing rhythm with the mountain. The tranquility of the surroundings adds to the magic of the experience. High up in the mountains, a serene hush envelops me, and I feel an extraordinary sense of peace. Amidst the vast and magnificent landscapes, I find myself in awe of nature's grandeur. Each moment on the board is a precious encounter with the sublime beauty of the world. Snowboarding is not just a thrilling adventure, but a soulful journey that connects me to both nature and myself. It's in these mountains that I find solace, and where I feel truly alive, gliding through the snow in perfect harmony with the wonders of the world around me.</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn =  document.querySelector(".toggle_btn")
+        const toggleBtnIcon =  document.querySelector(".toggle_btn i")
+        const dropDownMenu =  document.querySelector(".dropdown_menu")
+
+        toggleBtn.onclick = function() {
+            dropDownMenu.classList.toggle("open")
+            const isOpen = dropDownMenu.classList.contains("open")
+
+            toggleBtnIcon.classList = isOpen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+
+        }
+    </script>
+    
+</body>
+</html>
